@@ -31,7 +31,13 @@ const Links = () => {
   return (
     <motion.div className="links" variants={variants}>
       {links.map((link, index) => (
-        <motion.a key={link + index} href={`#${link}`} variants={itemVariants}>
+        <motion.a
+          key={link + index}
+          href={`#${link}`}
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
           {link}
         </motion.a>
       ))}
